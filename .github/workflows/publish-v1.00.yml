@@ -1,4 +1,4 @@
-name: Publish VIRM Assistant 1.00
+name: Finalize VIRM Assistant 1.00
 
 on:
   push:
@@ -9,33 +9,16 @@ permissions:
   contents: write
 
 jobs:
-  release:
+  finalize:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Assemble Safari downloads
+      - name: Move version tag to the cleaned release commit
         shell: bash
         run: |
-          mkdir -p dist
-          cat release_chunks/mobile/part-* > dist/VIRM_Assistant_Safari_Mobile.user.js
-          cat release_chunks/computer/part-* > dist/VIRM_Assistant_Safari_Computer.user.js
-          cp safari/VIRM_Assistant_Safari_Mobile.meta.js dist/
-          cp safari/VIRM_Assistant_Safari_Computer.meta.js dist/
-          node --check dist/VIRM_Assistant_Safari_Mobile.user.js
-          node --check dist/VIRM_Assistant_Safari_Computer.user.js
-
-      - name: Publish GitHub Release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          if gh release view v1.00 >/dev/null 2>&1; then
-            gh release upload v1.00 dist/* --clobber
-          else
-            gh release create v1.00 dist/* \
-              --target main \
-              --title "VIRM Assistant 1.00" \
-              --notes "Første offentlige Safari-udgave af VIRM Assistant. Vælg Safari Mobile til iPhone/iPad eller Safari Computer til Mac. Se INSTALLATION.md i repositoriet for installationsvejledning."
-          fi
+          git tag -f v1.00 "$GITHUB_SHA"
+          git push --force origin v1.00
