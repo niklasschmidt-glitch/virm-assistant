@@ -1,3 +1,32 @@
+# VIRM Assistant
+
+VIRM Assistant er en uofficiel browserudvidelse til Virtual Manager, som tilføjer værktøjer direkte på spillets sider.
+
+## Funktioner
+
+- **Træningsmodul:** Planlæg eller generér et træningsprogram, og indstil automatisk overførsel til Virtual Manager.
+- **Taktikrotation:** Fordel automatisk taktikker mellem sæsonens kampe ud fra dine egne kriterier.
+- **Potentialepoint, karrierepoint og spillerprognose:** Få en dybdegående analyse af en spillers potentiale og potentialeudnyttelse.
+
+VIRM Assistant er udviklet uafhængigt og er ikke tilknyttet, godkendt eller understøttet af Virtual Manager eller spillets udviklere.
+
+## Safari
+
+Safari-udgaven installeres som et userscript ved hjælp af den gratis Userscripts-app.
+
+**[Se installationsguiden og hent den nyeste Safari-udgave](INSTALLATION.md)**
+
+Der findes særskilte versioner til:
+
+- iPhone og iPad
+- Safari på Mac
+
+## Support
+
+Fejl, spørgsmål og forslag kan oprettes under [Issues](https://github.com/niklasschmidt-glitch/virm-assistant/issues).
+
+---
+
 # Privatlivspolitik for VIRM Assistant
 
 Senest opdateret: 31. august 2026
@@ -22,9 +51,9 @@ Når mindst én Virtual Manager-side er åben, kan VIRM Assistant sende et aktiv
 
 Aktivitetssignalet indeholder kun:
 
-* et tilfældigt sessions-id
-* VIRM Assistants versionsnummer
-* den anvendte platform, eksempelvis Chrome eller Safari
+- et tilfældigt sessions-id
+- VIRM Assistants versionsnummer
+- den anvendte platform, eksempelvis Chrome eller Safari
 
 Sessions-id'et er ikke knyttet til brugerens Virtual Manager-konto og nulstilles, når Chrome genstartes.
 
@@ -42,11 +71,11 @@ Aktive sessions-id'er bruges kun til at beregne antallet af aktive installatione
 
 VIRM Assistant:
 
-* sælger ikke brugerdata
-* anvender ikke brugerdata til annoncering
-* anvender ikke brugerdata til kreditvurdering eller långivning
-* overfører ikke brugerdata til uvedkommende tredjeparter
-* anvender kun oplysningerne til udvidelsens beskrevne funktioner og driftsstatistik
+- sælger ikke brugerdata
+- anvender ikke brugerdata til annoncering
+- anvender ikke brugerdata til kreditvurdering eller långivning
+- overfører ikke brugerdata til uvedkommende tredjeparter
+- anvender kun oplysningerne til udvidelsens beskrevne funktioner og driftsstatistik
 
 Cloudflare fungerer som teknisk tjenesteudbyder for aktivitetssignalet.
 
