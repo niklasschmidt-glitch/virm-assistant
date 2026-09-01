@@ -15,7 +15,7 @@ Vælg derefter den udgave, der passer til din enhed:
 2. Åbn Userscripts én gang, og vælg eller bekræft den mappe, hvor scripts gemmes.
 3. Åbn **Indstillinger > Apps > Safari > Udvidelser > Userscripts**, og slå udvidelsen til.
 4. Giv Userscripts adgang til `virtualmanager.com`. Scriptet er teknisk begrænset til Virtual Managers sider.
-5. Åbn linket **Safari Mobil – direkte installation** i Safari.
+5. Åbn linket **Safari iPhone/iPad - javascipt** i Safari.
 6. Åbn Userscripts via Safaris udvidelsesmenu, og godkend installationen af VIRM Assistant.
 7. Genindlæs Virtual Manager.
 
@@ -26,7 +26,7 @@ Hvis installationsvinduet ikke vises, kan du i stedet gemme `.user.js`-filen i d
 1. Installér **Userscripts** fra linket ovenfor.
 2. Åbn **Safari > Indstillinger > Udvidelser**, og slå Userscripts til.
 3. Giv Userscripts adgang til `virtualmanager.com`.
-4. Åbn linket **Safari Computer – direkte installation** i Safari.
+4. Åbn linket **Safari Mac – javascript** i Safari.
 5. Åbn Userscripts via Safaris værktøjslinje, og godkend installationen.
 6. Genindlæs Virtual Manager.
 
