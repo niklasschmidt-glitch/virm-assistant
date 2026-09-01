@@ -6,8 +6,8 @@ VIRM Assistant til Safari udgives som et userscript. Du skal derfor først insta
 
 Vælg derefter den udgave, der passer til din enhed:
 
-- **[Safari iPhone/iPad – javascript](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Mobile.user.js)**
-- **[Safari Mac – javascript](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Computer.user.js)**
+- **[Safari på iPhone/iPad – installationsfil](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Mobile.user.js)**
+- **[Safari på Mac – installationsfil](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Computer.user.js)**
 
 ## iPhone og iPad
 
@@ -15,7 +15,7 @@ Vælg derefter den udgave, der passer til din enhed:
 2. Åbn Userscripts én gang, og vælg eller bekræft den mappe, hvor scripts gemmes.
 3. Åbn **Indstillinger > Apps > Safari > Udvidelser > Userscripts**, og slå udvidelsen til.
 4. Giv Userscripts adgang til `virtualmanager.com`. Scriptet er teknisk begrænset til Virtual Managers sider.
-5. Åbn linket **Safari iPhone/iPad - javascipt** i Safari.
+5. Åbn linket **Safari på iPhone/iPad – installationsfil** i Safari.
 6. Åbn Userscripts via Safaris udvidelsesmenu, og godkend installationen af VIRM Assistant.
 7. Genindlæs Virtual Manager.
 
@@ -38,4 +38,4 @@ VIRM Assistant indeholder oplysninger om den seneste download. Når en nyere ver
 
 ## Om projektet
 
-VIRM Assistant er udviklet uafhængigt og er ikke tilknyttet, godkendt eller understøttet af Virtual Managers eller Userscripts' udviklere.
+VIRM Assistant er udviklet uafhængigt og er ikke tilknyttet, godkendt eller understøttet af udviklerne bag Virtual Manager eller Userscripts.
