@@ -6,8 +6,8 @@ VIRM Assistant til Safari udgives som et userscript. Du skal derfor først insta
 
 Vælg derefter den udgave, der passer til din enhed:
 
-- **[Safari Mobil – javascript](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Mobile.user.js)**
-- **[Safari Computer – javascript](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Computer.user.js)**
+- **[Safari iPhone/iPad – javascript](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Mobile.user.js)**
+- **[Safari Mac – javascript](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Computer.user.js)**
 
 ## iPhone og iPad
 
