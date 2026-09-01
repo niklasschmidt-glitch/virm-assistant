@@ -26,7 +26,7 @@ Hvis installationsvinduet ikke vises, kan du i stedet gemme `.user.js`-filen i d
 1. Installér **Userscripts** fra linket ovenfor.
 2. Åbn **Safari > Indstillinger > Udvidelser**, og slå Userscripts til.
 3. Giv Userscripts adgang til `virtualmanager.com`.
-4. Åbn linket **Safari Mac – javascript** i Safari.
+4. Åbn linket **Safari på Mac – installationsfil** i Safari.
 5. Åbn Userscripts via Safaris værktøjslinje, og godkend installationen.
 6. Genindlæs Virtual Manager.
 
