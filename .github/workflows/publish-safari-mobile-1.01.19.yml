@@ -1,0 +1,36 @@
+name: Publish Safari Mobile 1.01.19
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-safari-mobile-1.01.19.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download unchanged Safari Mac build
+        run: |
+          curl --fail --location --output safari/VIRM_Assistant_Safari_Computer.user.js \
+            https://github.com/niklasschmidt-glitch/virm-assistant/releases/download/v1.00/VIRM_Assistant_Safari_Computer.user.js
+
+      - name: Publish version 1.01.19
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v1.01.19 \
+            safari/VIRM_Assistant_Safari_Mobile.user.js \
+            safari/VIRM_Assistant_Safari_Mobile.meta.js \
+            safari/VIRM_Assistant_Safari_Computer.user.js \
+            safari/VIRM_Assistant_Safari_Computer.meta.js \
+            --target main \
+            --title "VIRM Assistant 1.01.19" \
+            --notes "Opdateret Safari Mobile-udgave (1.01.19). Safari-versionen til Mac er uændret. / Updated Safari Mobile version (1.01.19). The Safari version for Mac is unchanged."
