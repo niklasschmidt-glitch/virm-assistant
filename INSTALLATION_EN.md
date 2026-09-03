@@ -6,7 +6,7 @@ VIRM Assistant for Safari is distributed as a userscript. You must therefore fir
 
 Then choose the version for your device:
 
-- **[Safari on iPhone/iPad – installation file](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Mobile.user.js)**
+- **[Safari on iPhone/iPad – installation file](https://raw.githubusercontent.com/niklasschmidt-glitch/virm-assistant/main/safari/VIRM_Assistant_Safari_Mobile.user.js)**
 - **[Safari on Mac – installation file](https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/VIRM_Assistant_Safari_Computer.user.js)**
 
 ## iPhone and iPad
