@@ -1,0 +1,122 @@
+name: Publish Safari 1.02.1
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-safari-1.02.1.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update Safari Mobile to 1.02.1 and remove group debug
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          user_path = Path('safari/VIRM_Assistant_Safari_Mobile.user.js')
+          meta_path = Path('safari/VIRM_Assistant_Safari_Mobile.meta.js')
+          text = user_path.read_text(encoding='utf-8')
+
+          header = '\n'.join(text.splitlines()[:20])
+          if 'ADMIN' in header.upper():
+              raise SystemExit('Refusing to publish an ADMIN Safari build.')
+
+          if '// @version      1.02' not in text:
+              raise SystemExit('Expected Safari Mobile 1.02 as the source build.')
+          text = text.replace('// @version      1.02', '// @version      1.02.1', 1)
+          text = text.replace('const VIRM_BUILD_VERSION = "1.02";', 'const VIRM_BUILD_VERSION = "1.02.1";', 1)
+
+          start_marker = '  function groupDebugRect(element) {'
+          end_marker = '  function openMainMenu(anchor) {'
+          start = text.find(start_marker)
+          end = text.find(end_marker, start + 1)
+          if start < 0 or end < 0:
+              raise SystemExit('Could not locate the Training Module group-debug block.')
+          text = text[:start] + text[end:]
+
+          debug_menu = '      menuItem(plannerText("Download gruppedebug", "Download group debug"), () => { void downloadTrainingGroupDebug(); }),\n'
+          if debug_menu not in text:
+              raise SystemExit('Could not locate the Training Module group-debug menu item.')
+          text = text.replace(debug_menu, '', 1)
+
+          forbidden = [
+              'Download gruppedebug',
+              'Download group debug',
+              'downloadTrainingGroupDebug',
+              'buildTrainingGroupDebugPayload',
+              'groupDebugRect',
+          ]
+          for token in forbidden:
+              if token in text:
+                  raise SystemExit(f'Group debug still present after cleanup: {token}')
+          if 'ADMIN' in '\n'.join(text.splitlines()[:20]).upper():
+              raise SystemExit('Refusing to publish an ADMIN Safari build.')
+          if '// @version      1.02.1' not in text or 'const VIRM_BUILD_VERSION = "1.02.1";' not in text:
+              raise SystemExit('Version bump to 1.02.1 failed.')
+          user_path.write_text(text, encoding='utf-8')
+
+          meta = meta_path.read_text(encoding='utf-8')
+          if 'ADMIN' in meta.upper():
+              raise SystemExit('Refusing to publish ADMIN metadata.')
+          if '// @version      1.02' not in meta:
+              raise SystemExit('Expected Safari Mobile metadata version 1.02.')
+          meta = meta.replace('// @version      1.02', '// @version      1.02.1', 1)
+          meta_path.write_text(meta, encoding='utf-8')
+          PY
+
+          node --check safari/VIRM_Assistant_Safari_Mobile.user.js
+          grep -F '// @version      1.02.1' safari/VIRM_Assistant_Safari_Mobile.user.js
+          grep -F '// @version      1.02.1' safari/VIRM_Assistant_Safari_Mobile.meta.js
+          ! grep -F 'Download gruppedebug' safari/VIRM_Assistant_Safari_Mobile.user.js
+          ! grep -F 'Download group debug' safari/VIRM_Assistant_Safari_Mobile.user.js
+
+      - name: Commit Safari Mobile 1.02.1 files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add safari/VIRM_Assistant_Safari_Mobile.user.js safari/VIRM_Assistant_Safari_Mobile.meta.js
+          git commit -m 'Update Safari Mobile to 1.02.1'
+          git push
+
+      - name: Prepare unchanged Safari Mac build
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --output safari/VIRM_Assistant_Safari_Computer.user.js \
+            https://github.com/niklasschmidt-glitch/virm-assistant/releases/download/v1.02/VIRM_Assistant_Safari_Computer.user.js
+          if head -n 20 safari/VIRM_Assistant_Safari_Computer.user.js | grep -qi 'ADMIN'; then
+            echo 'Refusing to publish an ADMIN Safari Mac build.' >&2
+            exit 1
+          fi
+          if head -n 20 safari/VIRM_Assistant_Safari_Computer.meta.js | grep -qi 'ADMIN'; then
+            echo 'Refusing to publish ADMIN Safari Mac metadata.' >&2
+            exit 1
+          fi
+
+      - name: Publish Safari release 1.02.1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create v1.02.1 \
+            safari/VIRM_Assistant_Safari_Mobile.user.js \
+            safari/VIRM_Assistant_Safari_Mobile.meta.js \
+            safari/VIRM_Assistant_Safari_Computer.user.js \
+            safari/VIRM_Assistant_Safari_Computer.meta.js \
+            --target main \
+            --title 'VIRM Assistant 1.02.1' \
+            --notes 'Safari Mobile er opdateret til VIRM Assistant 1.02.1. Gruppedebug er fjernet fra Træningsmodulet. Safari på Mac er uændret. / Safari Mobile is updated to VIRM Assistant 1.02.1. Group debug has been removed from the Training Module. Safari for Mac is unchanged.'
