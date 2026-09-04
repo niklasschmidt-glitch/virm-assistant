@@ -3,7 +3,7 @@
 // @name:da      VIRM Assistant – Safari Mobile
 // @name:en      VIRM Assistant – Safari Mobile
 // @namespace    https://www.virtualmanager.com/
-// @version      1.01.19
+// @version      1.02
 // @description  Planlæg træning og vis PP/KP på markeder og spillersider direkte i Virtual Manager.
 // @description:da Planlæg træning og vis PP/KP på markeder og spillersider direkte i Virtual Manager.
 // @description:en Plan training and view PP/CP on market and player pages directly in Virtual Manager.
