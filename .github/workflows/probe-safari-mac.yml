@@ -1,0 +1,39 @@
+name: Probe Safari Mac source resources
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/probe-safari-mac.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect existing Safari Mac release
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --output /tmp/old-mac.user.js \
+            https://github.com/niklasschmidt-glitch/virm-assistant/releases/download/v1.02/VIRM_Assistant_Safari_Computer.user.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, hashlib, json, re
+
+          text = Path('/tmp/old-mac.user.js').read_text(encoding='utf-8')
+          print('OLD_MAC_BYTES', len(text.encode('utf-8')))
+          print('OLD_MAC_SHA256', hashlib.sha256(text.encode('utf-8')).hexdigest())
+          match = re.search(r'^const VIRM_MAC_EMBEDDED_RESOURCES = (\{.*\});$', text, re.M)
+          if not match:
+              print('NO_EMBEDDED_RESOURCES_OBJECT')
+              raise SystemExit(0)
+          resources = json.loads(match.group(1))
+          for name in sorted(resources):
+              raw = base64.b64decode(resources[name].get('base64', ''))
+              print('RESOURCE', name, len(raw), hashlib.sha256(raw).hexdigest())
+          PY
