@@ -14,7 +14,7 @@ Then choose the version for your device:
 1. Install **Userscripts** using the link above.
 2. Open Userscripts once, then select or confirm the folder where scripts will be stored.
 3. Open **Settings > Apps > Safari > Extensions > Userscripts**, then enable the extension.
-4. Allow Userscripts to access `virtualmanager.com`. The script is technically restricted to Virtual Manager pages.
+4. Open **Settings > Apps > Safari > Extensions > Userscripts**. Make sure the extension is enabled, then choose **Allow** next to **Other Websites**. The script is technically restricted to Virtual Manager pages.
 5. Open the **Safari on iPhone/iPad – installation file** link in Safari.
 6. Open Userscripts from Safari’s extensions menu and approve the installation of VIRM Assistant.
 7. Reload Virtual Manager.
@@ -24,13 +24,14 @@ If the installation window does not appear, you can save the `.user.js` file in 
 ## Mac
 
 1. Install **Userscripts** using the link above.
-2. Open **Safari > Settings > Extensions**, then enable Userscripts.
-3. Allow Userscripts to access `virtualmanager.com`.
-4. Open the **Safari on Mac – installation file** link in Safari.
-5. Open Userscripts from Safari’s toolbar and approve the installation.
-6. Reload Virtual Manager.
+2. Open Userscripts once. On Mac, the default scripts folder is normally used automatically; choose a different folder only if the app asks you to.
+3. Open **Safari > Settings > Extensions > Userscripts**, then enable the extension.
+4. With **Userscripts** selected, choose **Edit Websites…** and set `virtualmanager.com` to **Allow**. If `virtualmanager.com` is not listed, open the site in Safari first, then return to the extension settings. You can also choose **Always Allow on Every Website**; the VIRM script itself is technically restricted to Virtual Manager pages.
+5. Open the **Safari on Mac – installation file** link in Safari.
+6. Click **Userscripts** in Safari’s toolbar and approve the installation of VIRM Assistant.
+7. Reload Virtual Manager.
 
-If the installation window does not appear, you can download the `.user.js` file and add it to Userscripts manually.
+If the installation window does not appear, save the `.user.js` file in the scripts folder used by Userscripts, then open the Userscripts menu in Safari once to refresh the script list.
 
 ## Updates
 
