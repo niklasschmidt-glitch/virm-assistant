@@ -24,13 +24,14 @@ Hvis installationsvinduet ikke vises, kan du i stedet gemme `.user.js`-filen i d
 ## Mac
 
 1. Installér **Userscripts** fra linket ovenfor.
-2. Åbn **Safari > Indstillinger > Udvidelser**, og slå Userscripts til.
-3. Giv Userscripts adgang til `virtualmanager.com`.
-4. Åbn linket **Safari på Mac – installationsfil** i Safari.
-5. Åbn Userscripts via Safaris værktøjslinje, og godkend installationen.
-6. Genindlæs Virtual Manager.
+2. Åbn Userscripts én gang. På Mac bruges standardmappen til scripts normalt automatisk; vælg kun en anden mappe, hvis appen beder om det.
+3. Åbn **Safari > Indstillinger > Udvidelser > Userscripts**, og slå udvidelsen til.
+4. Mens **Userscripts** er markeret, vælg **Rediger websteder…** og sæt `virtualmanager.com` til **Tillad**. Hvis `virtualmanager.com` ikke vises på listen, så åbn siden i Safari først og gå derefter tilbage til indstillingerne. Du kan også vælge **Tillad altid på alle websteder**; selve VIRM-scriptet er teknisk begrænset til Virtual Managers sider.
+5. Åbn linket **Safari på Mac – installationsfil** i Safari.
+6. Klik på **Userscripts** i Safaris værktøjslinje, og godkend installationen af VIRM Assistant.
+7. Genindlæs Virtual Manager.
 
-Hvis installationsvinduet ikke vises, kan `.user.js`-filen downloades og tilføjes manuelt i Userscripts.
+Hvis installationsvinduet ikke vises, kan du gemme `.user.js`-filen i den scriptmappe, som Userscripts bruger, og derefter åbne Userscripts-menuen i Safari én gang for at genindlæse scriptlisten.
 
 ## Opdateringer
 
