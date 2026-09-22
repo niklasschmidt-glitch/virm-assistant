@@ -14,7 +14,7 @@ Vælg derefter den udgave, der passer til din enhed:
 1. Installér **Userscripts** fra linket ovenfor.
 2. Åbn Userscripts én gang, og vælg eller bekræft den mappe, hvor scripts gemmes.
 3. Åbn **Indstillinger > Apps > Safari > Udvidelser > Userscripts**, og slå udvidelsen til.
-4. Giv Userscripts adgang til `virtualmanager.com`. Scriptet er teknisk begrænset til Virtual Managers sider.
+4. Åbn **Indstillinger > Apps > Safari > Udvidelser > Userscripts**. Sørg for, at udvidelsen er slået til, og vælg **Tillad** ud for **Andre websteder**. Scriptet er teknisk begrænset til Virtual Managers sider.
 5. Åbn linket **Safari på iPhone/iPad – installationsfil** i Safari.
 6. Åbn Userscripts via Safaris udvidelsesmenu, og godkend installationen af VIRM Assistant.
 7. Genindlæs Virtual Manager.
