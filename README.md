@@ -2,9 +2,13 @@
 
 VIRM Assistant er en uofficiel browserudvidelse til Virtual Manager, som tilføjer værktøjer direkte på spillets sider.
 
+**Seneste Safari-udgave: 1.08 til både Mac og iPhone/iPad.**
+
 ## Funktioner
 
+- **Kontrolcenter:** Saml blandt andet træning, kontrakter, kommende kampe, stadiontilstand, ligatabeller og noter på én side. Tilpas selv modulerne og deres rækkefølge.
 - **Træningsmodul:** Planlæg eller generér et træningsprogram, og indstil automatisk overførsel til Virtual Manager.
+- **Kontraktforlænger:** Forlæng kontrakter for seniorhold, ungdomshold og ansatte ud fra ønsket varighed og den valgte afvigelse.
 - **Taktikrotation:** Fordel automatisk taktikker mellem sæsonens kampe ud fra dine egne kriterier.
 - **Potentialepoint, karrierepoint og spillerprognose:** Få en dybdegående analyse af en spillers potentiale og potentialeudnyttelse.
 
@@ -21,6 +25,14 @@ Der findes særskilte versioner til:
 - iPhone og iPad
 - Safari på Mac
 
+Version 1.08 indeholder de aktuelle værktøjer og rettelser fra Chrome-udgaven, danske og engelske manualer samt den anonyme statistikindsamling, der beskrives nedenfor. Offentlige Safari-filer indeholder ingen debug- eller adminpaneler.
+
+### English
+
+**Latest Safari release: 1.08 for both Mac and iPhone/iPad.** VIRM Assistant adds a customizable Control center, Training Module, Contract renewal, Tactic Scheduler, club ratings and player analysis directly to Virtual Manager. Version 1.08 includes the current tools and fixes, Danish and English manuals, and the anonymous activity signal described in the privacy policy below.
+
+**[Installation guide and Safari downloads in English](INSTALLATION_EN.md)**
+
 ## Support
 
 Fejl, spørgsmål og forslag kan oprettes under [Issues](https://github.com/niklasschmidt-glitch/virm-assistant/issues).
@@ -29,7 +41,7 @@ Fejl, spørgsmål og forslag kan oprettes under [Issues](https://github.com/nikl
 
 # Privatlivspolitik for VIRM Assistant
 
-Senest opdateret: 31. august 2026
+Senest opdateret: 15. oktober 2026
 
 ## Om VIRM Assistant
 
@@ -55,7 +67,7 @@ Aktivitetssignalet indeholder kun:
 - VIRM Assistants versionsnummer
 - den anvendte platform, eksempelvis Chrome eller Safari
 
-Sessions-id'et er ikke knyttet til brugerens Virtual Manager-konto og nulstilles, når Chrome genstartes.
+Sessions-id'et er ikke knyttet til brugerens Virtual Manager-konto. Chrome opretter et nyt id ved en ny browsersession. Safari på Mac gemmer id'et i fanens sessionslager, mens Safari på iPhone/iPad udskifter det efter højst 12 timer.
 
 Aktivitetssignalet indeholder ikke brugerens navn, mailadresse, loginoplysninger, Virtual Manager-konto, klub, spillere, sideadresse eller andet indhold fra Virtual Manager.
 
@@ -92,3 +104,4 @@ Da aktivitetssignalet ikke er knyttet til en konto eller identificeret person, k
 Spørgsmål om denne privatlivspolitik kan oprettes som en sag på:
 
 https://github.com/niklasschmidt-glitch/virm-assistant/issues
+

@@ -1,0 +1,69 @@
+name: Publish Safari 1.08
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-safari-1.08.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-safari-1.08
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the verified Safari builds
+        uses: actions/checkout@v4
+
+      - name: Verify release bytes, versions and update URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum --check <<'SHA256'
+          5445fd80e6333f96263c6617cff1623c30f5edd571dfdf01fa03a554b2e22eef  safari/VIRM_Assistant_Safari_Mac.meta.js
+          444fc4593901286282a5851b26da611013bc5e97ae9d36e185f3c8bf70405fe5  safari/VIRM_Assistant_Safari_Mac.user.js
+          d86e3632bd31f879cb290519d126e5e12811255fe95259d819678fbbbaad682f  safari/VIRM_Assistant_Safari_Mobile.meta.js
+          94100875c9c634f4e77aa11647be3c6bde903d61d10671511641c790c03e69f7  safari/VIRM_Assistant_Safari_Mobile.user.js
+          SHA256
+          node --check safari/VIRM_Assistant_Safari_Mac.user.js
+          node --check safari/VIRM_Assistant_Safari_Mobile.user.js
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          import re
+          base = 'https://github.com/niklasschmidt-glitch/virm-assistant/releases/latest/download/'
+          for platform in ('Mac', 'Mobile'):
+              stem = f'VIRM_Assistant_Safari_{platform}'
+              user = Path(f'safari/{stem}.user.js').read_text()
+              meta = Path(f'safari/{stem}.meta.js').read_text()
+              header = user[:user.index('// ==/UserScript==') + len('// ==/UserScript==')]
+              assert header == meta.rstrip(), platform
+              assert re.search(r'^// @version\s+1\.08$', header, re.M), platform
+              assert base + stem + '.meta.js' in header, platform
+              assert base + stem + '.user.js' in header, platform
+              assert not re.search(r'ADMIN|Hent debug|Download debug', header, re.I), platform
+              assert 'Hent debug' not in user and 'Download debug' not in user, platform
+              assert 'Safari Mac' in user if platform == 'Mac' else 'Safari Mobile' in user
+          PYTHON
+
+      - name: Publish Safari Mac and Mobile 1.08
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create v1.08 \
+            safari/VIRM_Assistant_Safari_Mac.user.js \
+            safari/VIRM_Assistant_Safari_Mac.meta.js \
+            safari/VIRM_Assistant_Safari_Mobile.user.js \
+            safari/VIRM_Assistant_Safari_Mobile.meta.js \
+            --target "$GITHUB_SHA" \
+            --title 'VIRM Assistant 1.08 – Safari Mac & Mobile' \
+            --notes-file safari/RELEASE_NOTES_1.08.md \
+            --latest

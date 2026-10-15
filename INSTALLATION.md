@@ -1,5 +1,9 @@
 # Installation af VIRM Assistant i Safari
 
+**Aktuel version: 1.08 til både Mac og iPhone/iPad.**
+
+[English installation guide](INSTALLATION_EN.md)
+
 VIRM Assistant til Safari udgives som et userscript. Du skal derfor først installere den gratis **Userscripts**-app:
 
 **[Hent Userscripts til iPhone, iPad eller Mac](https://apps.apple.com/app/userscripts/id1463298887)**
@@ -37,6 +41,9 @@ Hvis installationsvinduet ikke vises, kan du gemme `.user.js`-filen i den script
 
 VIRM Assistant indeholder oplysninger om den seneste download. Når en nyere version udgives, kan Userscripts kontrollere versionsnummeret og hente opdateringen. Du kan også altid hente den nyeste udgave via linksene på denne side.
 
+Har du allerede VIRM Assistant installeret, skal du opdatere den eksisterende udgave i Userscripts. Kontrollér bagefter, at versionen er **1.08**, og genindlæs Virtual Manager. Undgå at have flere aktive kopier af samme Safari-udgave.
+
 ## Om projektet
 
 VIRM Assistant er udviklet uafhængigt og er ikke tilknyttet, godkendt eller understøttet af udviklerne bag Virtual Manager eller Userscripts.
+
