@@ -3,7 +3,7 @@
 // @name:da      VIRM Assistant – Safari Mac
 // @name:en      VIRM Assistant – Safari Mac
 // @namespace    https://www.virtualmanager.com/
-// @version      1.08
+// @version      1.09
 // @description  VIRM Assistant til Virtual Manager på Safari til Mac.
 // @description:da VIRM Assistant til Virtual Manager på Safari til Mac.
 // @description:en VIRM Assistant for Virtual Manager on Safari for Mac.
@@ -142,7 +142,7 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
   chromeShim.runtime={
     ...(chromeShim.runtime||{}),
     getURL(path){return resourceUrls[String(path||"").replace(/^\/+/,"")]||"";},
-    getManifest(){return {name:"VIRM Assistant",version:"1.8.0",version_name:"1.08"};},
+    getManifest(){return {name:"VIRM Assistant",version:"1.9.0",version_name:"1.09"};},
   };
   globalThis.chrome=chromeShim;
 
@@ -151,7 +151,7 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
   pageCss.textContent=VIRM_MAC_PAGE_CSS+"\n"+VIRM_MAC_TRAINING_HOST_CSS;
   (document.head||document.documentElement).appendChild(pageCss);
 
-/* ===== Chrome 1.08 source: localization.js ===== */
+/* ===== Chrome 1.09 source: localization.js ===== */
 (() => {
   "use strict";
 
@@ -911,7 +911,7 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
     attributes: true, attributeFilter: ["lang", "xml:lang", "content"] });
 })();
 
-/* ===== Chrome 1.08 source: request_guard.js ===== */
+/* ===== Chrome 1.09 source: request_guard.js ===== */
 (() => {
   "use strict";
 
@@ -1401,10 +1401,10 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
   else document.addEventListener("DOMContentLoaded", applyDomState, { once: true });
 })();
 
-/* ===== Chrome 1.08 source: version.js ===== */
-globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
+/* ===== Chrome 1.09 source: version.js ===== */
+globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.09";
 
-/* ===== Chrome 1.08 source: layout_observer.js ===== */
+/* ===== Chrome 1.09 source: layout_observer.js ===== */
 // Shared geometry tracking. Layout callbacks must preserve nodes and avoid data requests.
 (() => {
   "use strict";
@@ -1571,7 +1571,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
   else boot();
 })();
 
-/* ===== Chrome 1.08 source: reporting.js ===== */
+/* ===== Chrome 1.09 source: reporting.js ===== */
 (() => {
   "use strict";
 
@@ -2083,11 +2083,11 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
   }, true);
 })();
 
-/* ===== Chrome 1.08 source: contract_renewal.js ===== */
+/* ===== Chrome 1.09 source: contract_renewal.js ===== */
 (() => {
   "use strict";
 
-  const VIRM_CONTRACT_VERSION = "1.08";
+  const VIRM_CONTRACT_VERSION = "1.09";
   
   
   
@@ -2169,7 +2169,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
           <div class="virm-cr-bank-keys">
             <button type="button" class="virm-cr-key virm-cr-group-key" data-virm-contract-group="senior" aria-label="${labels.seniorGroup || "Seniorhold"}" aria-pressed="true" title="${labels.seniorGroup || "Seniorhold"}"${groupDisabled}>${labels.seniorShortcut || "S"}</button>
             <button type="button" class="virm-cr-key virm-cr-group-key" data-virm-contract-group="youth" aria-label="${labels.youthGroup || "Ungdomshold"}" aria-pressed="true" title="${labels.youthGroup || "Ungdomshold"}"${groupDisabled}>${labels.youthShortcut || "U"}</button>
-            <button type="button" class="virm-cr-key virm-cr-group-key" data-virm-contract-group="staff" aria-label="${labels.staffGroup || "Ansatte"}" aria-pressed="true" title="${labels.staffGroup || "Ansatte"}"${groupDisabled}>${labels.staffShortcut || "P"}</button>
+            <button type="button" class="virm-cr-key virm-cr-group-key" data-virm-contract-group="staff" aria-label="${labels.staffGroup || "Personale"}" aria-pressed="true" title="${labels.staffGroup || "Personale"}"${groupDisabled}>${labels.staffShortcut || "P"}</button>
           </div>
         </div>
         <div class="virm-cr-bank virm-cr-strategy-bank">
@@ -2195,7 +2195,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
       </div>${negotiation}`;
     };
     globalThis[SHARED_CONTRACT_UI_KEY] = Object.freeze({
-    version: "1.08",
+    version: "1.09",
       markup: sharedContractMarkup,
     });
   }
@@ -2273,7 +2273,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
     strategy: "Strategi",
     seniorGroup: "Seniorhold",
     youthGroup: "Ungdomshold",
-    staffGroup: "Personale/medarbejdere",
+    staffGroup: "Personale",
     seniorShortcut: "S",
     youthShortcut: "U",
     staffShortcut: "P",
@@ -5449,7 +5449,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot, { once: true });
 })();
 
-/* ===== Chrome 1.08 source: training_route.js ===== */
+/* ===== Chrome 1.09 source: training_route.js ===== */
 // LOCKED TRAINING PLANNER CORE – isolated from the rest of VIRM Assistant.
 // VMAN kan skifte side internt uden en fuld dokument-navigation. Content scripts
 // genkøres ikke ved sådan en navigation, så vi tvinger én normal reload, når
@@ -5485,7 +5485,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.08";
   else document.addEventListener("DOMContentLoaded", startObserver, { once: true });
 })();
 
-/* ===== Chrome 1.08 source: content.js ===== */
+/* ===== Chrome 1.09 source: content.js ===== */
 (() => {
   "use strict";
   if (globalThis.__VIRM_KV_MODE_V1__) return;
@@ -18367,7 +18367,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   else boot();
 })();
 
-/* ===== Chrome 1.08 source: control_center.js ===== */
+/* ===== Chrome 1.09 source: control_center.js ===== */
 (function initializeControlCenter() {
   "use strict";
 
@@ -18388,7 +18388,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   if (globalThis.__VIRM_CONTROL_CENTER_V2__) return;
   globalThis.__VIRM_CONTROL_CENTER_V2__ = true;
 
-  const BUILD_VERSION = "1.08";
+  const BUILD_VERSION = "1.09";
   const QUERY_KEY = "virm_control_center";
   const NAV_SECTION_ID = "virm-assistant-control-center-nav-section";
   const NAV_LINK_ID = "virm-assistant-control-center-nav-link";
@@ -18444,6 +18444,9 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       leaguePoints: "Pts",
       leagueLoading: "Loading league table…",
       leagueError: "The league table could not be loaded.",
+      leagueMarkersError: "Promotion/relegation highlights could not be loaded.",
+      leaguePromotion: "Promotion",
+      leagueRelegation: "Relegation",
       youthDraft: "Youth players",
       youthDraftPlayer: "Fetch player",
       youthDraftLoading: "Loading youth players…",
@@ -18551,6 +18554,9 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       leaguePoints: "P",
       leagueLoading: "Henter ligatabel…",
       leagueError: "Ligatabellen kunne ikke hentes.",
+      leagueMarkersError: "Op-/nedrykningsfelterne kunne ikke hentes.",
+      leaguePromotion: "Oprykning",
+      leagueRelegation: "Nedrykning",
       youthDraft: "Ungdomsspillere",
       youthDraftPlayer: "Hent spiller",
       youthDraftLoading: "Henter ungdomsspillere…",
@@ -18576,7 +18582,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       contracts: "Kontraktforlænger",
       expiringContracts: "Kontraktudløb",
       player: "Spiller",
-      employee: "Ansat",
+      employee: "Personale",
       expiringLoading: "Henter kontrakter…",
       expiringEmpty: "Ingen aktive kontrakter fundet.",
       expiringError: "Kontraktdata kunne ikke indlæses.",
@@ -18587,7 +18593,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       strategy: "Strategi",
       groupSenior: "Seniorhold",
       groupYouth: "Ungdomshold",
-      groupStaff: "Ansatte",
+      groupStaff: "Personale",
       wishes: "De ansattes ønskede varighed",
       custom: "Brugerdefineret afvigelse",
       maximum: "Maksimal forlængelse",
@@ -19131,15 +19137,21 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       #${MODULES_ID} .virm-cc-league-club-name{display:block!important;flex:0 1 auto!important;min-width:0!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;margin:0!important;padding:0!important;color:#579a25!important;font:700 11px/16px Arial,Helvetica,sans-serif!important;text-decoration:none!important}
       #${MODULES_ID} a.virm-cc-league-club-name:hover{text-decoration:underline!important;cursor:pointer!important}
       #${MODULES_ID} .virm-cc-league-table .virm-cc-league-own td{background:#e7e6e2!important;font-weight:700!important}
-      #${MODULES_ID} .virm-cc-league-table .virm-cc-league-divider td{border-top:1px dashed #aaa79f!important}
+      #${MODULES_ID} .virm-cc-league-table .virm-cc-league-zone td{background:var(--virm-league-zone-color)!important;border:1px solid #fff!important}
+      #${MODULES_ID} .virm-cc-league-legend{display:flex!important;flex-wrap:wrap!important;gap:3px 10px!important;margin:5px 0 0!important;padding:0!important;color:#555!important;font:400 10px/14px Arial,Helvetica,sans-serif!important}
+      #${MODULES_ID} .virm-cc-league-legend-item{display:inline-flex!important;align-items:center!important;gap:4px!important}
+      #${MODULES_ID} .virm-cc-league-legend-swatch{display:inline-block!important;flex:0 0 11px!important;width:11px!important;height:11px!important;border-radius:2px!important;background:var(--virm-league-zone-color)!important}
       #${MODULES_ID} .virm-cc-league-status{margin:0!important;padding:0!important;color:#777!important;font:400 11px/16px Arial,Helvetica,sans-serif!important}
       #${MODULES_ID} .virm-cc-league-status:empty{display:none!important}
       #${MODULES_ID} .virm-cc-league-retry{margin:5px 0 0!important}
       #${MODULES_ID} .virm-cc-league-retry[hidden]{display:none!important}
 
-      #${MODULES_ID} .virm-cc-expiring-table{width:100%!important;margin:0!important;padding:0!important;border:0!important;border-collapse:collapse!important;table-layout:fixed!important;background:transparent!important;color:#444!important;font:400 14px/1.25 Arial,Helvetica,sans-serif!important}
-      #${MODULES_ID} .virm-cc-expiring-table th{margin:0!important;padding:2px 8px 6px!important;border:0!important;border-bottom:1px solid #dedacf!important;background:transparent!important;color:#89867d!important;font:400 14px/18px Arial,Helvetica,sans-serif!important;text-align:left!important;white-space:nowrap!important}
-      #${MODULES_ID} .virm-cc-expiring-table td{margin:0!important;padding:7px 8px!important;border:0!important;border-bottom:1px solid #dedacf!important;background:transparent!important;color:#444!important;font:400 14px/20px Arial,Helvetica,sans-serif!important;text-align:left!important;vertical-align:middle!important}
+      #${MODULES_ID} .virm-cc-expiring-scroll{--virm-expiring-heading-height:27px;--virm-expiring-row-height:35px;min-width:0!important}
+      #${MODULES_ID} .virm-cc-expiring-scroll[data-virm-scrollable]{max-height:calc(var(--virm-expiring-heading-height) + 5 * var(--virm-expiring-row-height))!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior-y:contain!important;scroll-padding-top:var(--virm-expiring-heading-height)!important;scrollbar-width:thin!important;-webkit-overflow-scrolling:touch!important}
+      #${MODULES_ID} .virm-cc-expiring-scroll[data-virm-scrollable] th{position:sticky!important;top:0!important;z-index:1!important;background:#f6f3ea!important}
+      #${MODULES_ID} .virm-cc-expiring-table{width:100%!important;margin:0!important;padding:0!important;border:0!important;border-collapse:separate!important;border-spacing:0!important;table-layout:fixed!important;background:transparent!important;color:#444!important;font:400 14px/1.25 Arial,Helvetica,sans-serif!important}
+      #${MODULES_ID} .virm-cc-expiring-table th{box-sizing:border-box!important;height:var(--virm-expiring-heading-height)!important;margin:0!important;padding:2px 8px 6px!important;border:0!important;border-bottom:1px solid #dedacf!important;background:transparent!important;color:#89867d!important;font:400 14px/18px Arial,Helvetica,sans-serif!important;text-align:left!important;white-space:nowrap!important}
+      #${MODULES_ID} .virm-cc-expiring-table td{box-sizing:border-box!important;height:var(--virm-expiring-row-height)!important;margin:0!important;padding:7px 8px!important;border:0!important;border-bottom:1px solid #dedacf!important;background:transparent!important;color:#444!important;font:400 14px/20px Arial,Helvetica,sans-serif!important;text-align:left!important;vertical-align:middle!important;overflow:hidden!important;text-overflow:ellipsis!important}
       #${MODULES_ID} .virm-cc-expiring-table th:first-child,#${MODULES_ID} .virm-cc-expiring-table td:first-child{width:44%!important;padding-left:0!important}
       #${MODULES_ID} .virm-cc-expiring-table th:nth-child(2),#${MODULES_ID} .virm-cc-expiring-table td:nth-child(2){width:20%!important;white-space:nowrap!important}
       #${MODULES_ID} .virm-cc-expiring-table th:nth-child(3),#${MODULES_ID} .virm-cc-expiring-table td:nth-child(3){width:36%!important;white-space:nowrap!important}
@@ -19383,6 +19395,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       }
       @media(max-width:480px){
         #${MODULES_ID} .virm-cc-upcoming-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+        #${MODULES_ID} .virm-cc-expiring-scroll{--virm-expiring-heading-height:23px;--virm-expiring-row-height:26px}
         #${MODULES_ID} .virm-cc-expiring-table{font-size:11px!important;line-height:14px!important}
         #${MODULES_ID} .virm-cc-expiring-table th{padding:2px 4px 5px!important;font-size:11px!important;line-height:14px!important}
         #${MODULES_ID} .virm-cc-expiring-table td{padding:5px 4px!important;font-size:11px!important;line-height:15px!important}
@@ -21072,6 +21085,78 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
     } catch (_) { return ""; }
   }
 
+  // Read the full league page's row colours using VMAN's loaded stylesheet.
+  // Only row/cell backgrounds count: movement arrows and rating badges never
+  // determine promotion or relegation, and no rank thresholds are assumed.
+  function nativeLeagueRowHighlights(table, acceptedRows, entries) {
+    if (!document.body || typeof window.getComputedStyle !== "function") return;
+    const originals = Array.from(table.rows);
+    const clone = table.cloneNode(true);
+    let probe = clone;
+    // Include the source body/html classes and IDs for page-specific selectors,
+    // even when KC is currently displayed on another VMAN page.
+    for (let parent = table.parentElement; parent; parent = parent.parentElement) {
+      const shell = parent.cloneNode(false);
+      shell.appendChild(probe);
+      probe = shell;
+    }
+    probe.querySelectorAll("script,style,link,img,svg,iframe,object,embed,audio,video,source,input,button,textarea,select").forEach(node => node.remove());
+    [probe, ...probe.querySelectorAll("*")].forEach(node => {
+      for (const attribute of Array.from(node.attributes)) {
+        if (/^on/i.test(attribute.name)) node.removeAttribute(attribute.name);
+      }
+    });
+    probe.classList.add("virm-cc-native-league-probe");
+    probe.setAttribute("data-virm-i18n-skip", "true");
+    probe.setAttribute("aria-hidden", "true");
+    probe.setAttribute("inert", "");
+    for (const [property, value] of [["display", "none"], ["position", "fixed"], ["left", "-100000px"], ["top", "0"], ["visibility", "hidden"], ["pointer-events", "none"]]) {
+      probe.style.setProperty(property, value, "important");
+    }
+    const highlight = node => {
+      const color = window.getComputedStyle(node).backgroundColor;
+      const parts = color.match(/^rgba?\(([^)]+)\)$/i)?.[1].match(/[\d.]+/g)?.map(Number);
+      if (!parts || parts.length < 3 || (parts.length > 3 && parts[3] === 0)) return null;
+      const [red, green, blue] = parts;
+      const zone = green > red + 8 && green > blue + 8 ? "promotion"
+        : red > green + 8 && red > blue + 8 ? "relegation" : "";
+      return zone ? { zone, color } : null;
+    };
+    const rowHighlight = row => {
+      const direct = highlight(row);
+      if (direct) return direct;
+      const cells = Array.from(row.cells).map(highlight).filter(Boolean);
+      // An isolated status cell is not a promotion/relegation row.
+      for (const zone of ["promotion", "relegation"]) {
+        const matches = cells.filter(item => item.zone === zone);
+        if (matches.length >= Math.ceil(row.cells.length / 2)) return matches[0];
+      }
+      return row.parentElement?.tagName === "TBODY" ? highlight(row.parentElement) : null;
+    };
+    try {
+      document.body.appendChild(probe);
+      const clonedRows = Array.from(clone.rows);
+      acceptedRows.forEach((original, index) => {
+        const row = clonedRows[originals.indexOf(original)];
+        if (!row) return;
+        let zone = rowHighlight(row);
+        if (!zone && entries[index].own) {
+          // Reveal the underlying zone if the own-club grey highlight masks it.
+          // This only touches the temporary clone.
+          [row, ...row.cells].forEach(node => Array.from(node.classList).forEach(name => {
+            if (/^(?:highlighted|current|selected|own|active)$/i.test(name)) node.classList.remove(name);
+          }));
+          zone = rowHighlight(row);
+        }
+        if (zone) entries[index].highlight = zone;
+      });
+    } catch (_) {
+      // An unreadable native style never creates guessed promotion places.
+    } finally {
+      probe.remove();
+    }
+  }
+
   function leagueTablePageData(doc) {
     const root = doc.querySelector("#content") || doc.body;
     const text = node => String(node?.textContent || "").replace(/\s+/g, " ").trim();
@@ -21104,13 +21189,14 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       if (indexes[2] === indexes[4] && heads.length === 5) indexes[2] = 2;
       if (indexes.some(index => index < 0) || new Set(indexes).size !== 5) continue;
       const rows = [];
-      let divider = false;
+      const acceptedRows = [];
       for (const row of Array.from(table.rows)) {
         if (row === header || row.closest("thead")) continue;
-        if (row.classList.contains("divider")) { divider = true; continue; }
         const cells = definitions.map(([cls], index) => Array.from(row.cells).find(cell => cell.classList.contains(cls)) || row.cells[indexes[index]]);
         const [place, played, difference, points] = [integer(cells[0]), integer(cells[2]), integer(cells[3]), integer(cells[4])];
-        if (!/^\d+$/.test(place) || !/^\d+$/.test(played) || !/^[+-]?\d+$/.test(difference) || !/^[+-]?\d+$/.test(points)) continue;
+        if (!/^\d+$/.test(place) || !/^\d+$/.test(played) || !/^[+-]?\d+$/.test(difference) || !/^[+-]?\d+$/.test(points)) {
+          continue;
+        }
         const nameCell = cells[1];
         if (!nameCell) continue;
         const link = Array.from(nameCell.querySelectorAll("a[href]")).find(anchor =>
@@ -21124,10 +21210,11 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
         const squadId = href.match(/\/squads\/(\d+)/)?.[1] || row.getAttribute("data-squad-id") || "";
         const own = /(?:^|\s)(?:highlighted|current|selected|own|active)(?:\s|$)/i.test(row.className)
           || Boolean(ownClubId && clubId === ownClubId);
-        rows.push({ place, name, href, played, difference, points, clubId: clubId || (own ? ownClubId : ""), squadId, own, divider });
-        divider = false;
+        rows.push({ place, name, href, played, difference, points, clubId: clubId || (own ? ownClubId : ""), squadId, own });
+        acceptedRows.push(row);
       }
       if (rows.length < 2) continue;
+      nativeLeagueRowHighlights(table, acceptedRows, rows);
       const leagueHost = table.closest(".league_table");
       const host = leagueHost || table.parentElement;
       let heading = leagueHost?.querySelector("header,h2,h3,h4") || null;
@@ -21156,15 +21243,28 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   }
 
   async function loadLeagueTablePage(kind) {
-    const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 10000);
+    const fetchTable = async href => {
+      const controller = new AbortController();
+      const timeout = window.setTimeout(() => controller.abort(), 10000);
+      try {
+        const response = await fetch(href, {
+          credentials: "include", cache: "no-store", signal: controller.signal, headers: { Accept: "text/html" },
+        });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return leagueTablePageData(new DOMParser().parseFromString(await response.text(), "text/html"));
+      } finally { window.clearTimeout(timeout); }
+    };
+    const summary = await fetchTable(sitePath(kind === "youth" ? "/youth_squad" : "/overview"));
+    const href = leagueTableHref(summary.href);
     try {
-      const response = await fetch(sitePath(kind === "youth" ? "/youth_squad" : "/overview"), {
-        credentials: "include", cache: "no-store", signal: controller.signal, headers: { Accept: "text/html" },
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return leagueTablePageData(new DOMParser().parseFromString(await response.text(), "text/html"));
-    } finally { window.clearTimeout(timeout); }
+      if (!/\/(?:leagues|youth_leagues)\//.test(href)) throw new Error("Missing full league table link");
+      // The full league page contains the coloured promotion/relegation rows;
+      // Overview's compact table only contains the old boundary lines.
+      const full = await fetchTable(href);
+      return { ...summary, rows: full.rows, href };
+    } catch (_) {
+      return { ...summary, markersUnavailable: true };
+    }
   }
 
   function renderControlCenterLeagueTable(body, data, teamName) {
@@ -21204,7 +21304,11 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
     data.rows.forEach(item => {
       const tr = document.createElement("tr");
       if (item.own) tr.classList.add("virm-cc-league-own");
-      if (item.divider) tr.classList.add("virm-cc-league-divider");
+      if (item.highlight) {
+        tr.classList.add("virm-cc-league-zone", `virm-cc-league-${item.highlight.zone}`);
+        tr.style.setProperty("--virm-league-zone-color", item.highlight.color);
+        tr.title = item.highlight.zone === "promotion" ? labels.leaguePromotion : labels.leagueRelegation;
+      }
       [item.place, item.name, item.played, item.difference, item.points].forEach((value, index) => {
         const cell = document.createElement("td");
         cell.setAttribute("data-virm-i18n-skip", "true");
@@ -21227,6 +21331,21 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
     });
     table.append(colgroup, thead, tbody);
     body.appendChild(table);
+    const legend = document.createElement("div");
+    legend.className = "virm-cc-league-legend";
+    for (const zone of ["promotion", "relegation"]) {
+      const marked = data.rows.find(item => item.highlight?.zone === zone);
+      if (!marked) continue;
+      const item = document.createElement("span");
+      item.className = "virm-cc-league-legend-item";
+      const swatch = document.createElement("span");
+      swatch.className = "virm-cc-league-legend-swatch";
+      swatch.setAttribute("aria-hidden", "true");
+      swatch.style.setProperty("--virm-league-zone-color", marked.highlight.color);
+      item.append(swatch, document.createTextNode(zone === "promotion" ? labels.leaguePromotion : labels.leagueRelegation));
+      legend.appendChild(item);
+    }
+    if (legend.childElementCount) body.appendChild(legend);
     return badges;
   }
 
@@ -21271,7 +21390,8 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
         try {
           const data = await loadLeagueTablePage(kind);
           const badges = renderControlCenterLeagueTable(body, data, name);
-          status.textContent = "";
+          status.textContent = data.markersUnavailable ? labels.leagueMarkersError : "";
+          retry.hidden = !data.markersUnavailable;
           const api = globalThis.__VIRM_LEAGUE_KV_V1__;
           if (api?.resolveAll) {
             // KV is supplementary: the current standings remain usable while
@@ -21945,11 +22065,52 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   }
 
   function localizedContractExpiry(value) {
+    const text = String(value || "").replace(/\s+/g, " ").trim();
+    if (/^(?:i dag|today)$/i.test(text)) return english ? "Today" : "I dag";
     const units = english
       ? { dag: "day", dage: "days", time: "hour", timer: "hours", minut: "minute", minutter: "minutes", sekund: "second", sekunder: "seconds", pensioneres: "Retiring" }
       : { day: "dag", days: "dage", hour: "time", hours: "timer", minute: "minut", minutes: "minutter", second: "sekund", seconds: "sekunder", retiring: "Pensioneres" };
-    return String(value || "").replace(/\s+/g, " ").trim()
-      .replace(/\b(?:dage?|timer?|minut(?:ter)?|sekund(?:er)?|pensioneres|days?|hours?|minutes?|seconds?|retiring)\b/gi, word => units[word.toLowerCase()] || word);
+    return text.replace(/\b(?:dage?|timer?|minut(?:ter)?|sekund(?:er)?|pensioneres|days?|hours?|minutes?|seconds?|retiring)\b/gi, word => units[word.toLowerCase()] || word);
+  }
+
+  function expiringContractEntries(doc, snapshot, now = Date.now()) {
+    const records = new Map((snapshot?.analysis?.people || []).map(record => [`${record.kind}:${record.id}`, record]));
+    const nativeListing = doc?.querySelector(".contracts_listing");
+    const rows = new Map();
+    for (const row of doc?.querySelectorAll(".contracts_listing .players tbody tr,.contracts_listing .employees tbody tr") || []) {
+      const identity = contractIdentityFromRow(row);
+      if (identity && !rows.has(identity.key)) rows.set(identity.key, { row, identity });
+    }
+    // The renewal analysis can exclude contracts outside the renewal window.
+    // The native listing defines who's on the list; the snapshot adds details.
+    const keys = nativeListing ? rows.keys() : records.keys();
+    const entries = [];
+    for (const key of keys) {
+      const native = rows.get(key);
+      const sourceLink = native?.identity.link;
+      const record = records.get(key) || { kind: native.identity.kind, id: native.identity.id };
+      const expiryText = localizedContractExpiry(native?.row.querySelector(".expiry")?.textContent || record.expiryText);
+      const exact = Number(record.exactExpiry);
+      const rank = Number.isFinite(exact) && exact > 0 && (!native || exact > now)
+        ? exact : expiryTimestampFromText(expiryText, now) ?? Infinity;
+      if (rank <= now) continue;
+
+      const wageNode = native?.row.querySelector(".day_wage");
+      let wage = String(wageNode?.innerText || wageNode?.textContent || "").replace(/\s+/g, " ").trim();
+      if (wage && /\d/.test(wage) && !/\bC\b|credit/i.test(wage)) wage = `${wage} C`;
+      if (!wage) {
+        const baseWage = Number(record.baseDayWage);
+        wage = record.baseDayWage != null && String(record.baseDayWage).trim() !== "" && Number.isFinite(baseWage) && baseWage >= 0
+          ? `${new Intl.NumberFormat(english ? "en-GB" : "da-DK", { maximumFractionDigits: 0 }).format(baseWage)} C`
+          : "—";
+      }
+      const days = Math.ceil((rank - now) / 86_400_000);
+      const expiry = expiryText || (Number.isFinite(days)
+        ? `${days} ${days === 1 ? (english ? "day" : "dag") : (english ? "days" : "dage")}` : "—");
+      const name = sourceLink?.textContent?.trim() || record.name || `${record.kind} ${record.id}`;
+      entries.push({ record, rank, expiry, wage, name, sourceLink });
+    }
+    return entries.sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name, english ? "en" : "da"));
   }
 
   function createExpiringContractsModule() {
@@ -21974,9 +22135,22 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
     head.appendChild(headingRow);
     const body = document.createElement("tbody");
     table.append(head, body);
-    module.appendChild(table);
+    const scroll = document.createElement("div");
+    scroll.className = "virm-cc-expiring-scroll";
+    scroll.setAttribute("role", "region");
+    scroll.setAttribute("aria-label", labels.expiringContracts);
+    scroll.setAttribute("data-virm-cc-no-drag", "true");
+    scroll.appendChild(table);
+    module.appendChild(scroll);
+
+    const setScrollable = count => {
+      scroll.toggleAttribute("data-virm-scrollable", count > 5);
+      if (count > 5) scroll.tabIndex = 0;
+      else scroll.removeAttribute("tabindex");
+    };
 
     const showMessage = (text, busy = false) => {
+      setScrollable(0);
       const row = document.createElement("tr");
       const cell = document.createElement("td");
       cell.colSpan = 3;
@@ -21988,6 +22162,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
     };
 
     const render = (entries, frame) => {
+      const scrollTop = scroll.scrollTop;
       body.replaceChildren();
       table.setAttribute("aria-busy", "false");
       if (!entries.length) {
@@ -22000,7 +22175,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
         const nameWrap = document.createElement("span");
         nameWrap.className = "virm-cc-expiring-name";
         const link = document.createElement("a");
-        link.textContent = entry.record.name || entry.sourceLink?.textContent?.trim() || `${entry.record.kind} ${entry.record.id}`;
+        link.textContent = entry.name;
         link.setAttribute("data-virm-i18n-skip", "true");
         // VMAN profile URLs include the name after the ID. Reuse the exact
         // native URL, including when the person is supplied by the cache.
@@ -22022,6 +22197,8 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
         row.append(nameCell, wageCell, expiryCell);
         body.appendChild(row);
       });
+      setScrollable(entries.length);
+      scroll.scrollTop = scrollTop;
     };
 
     let refreshSerial = 0;
@@ -22030,47 +22207,23 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       showMessage(labels.expiringLoading, true);
       try {
         const frame = await directContractFrameHandle();
-        const snapshot = await directContractSnapshot(frame, 60000);
         if (serial !== refreshSerial) return;
         const doc = frame.contentDocument;
-        const rowByKey = new Map();
-        Array.from(doc?.querySelectorAll?.(".contracts_listing .players tbody tr,.contracts_listing .employees tbody tr") || []).forEach(domRow => {
-          const identity = contractIdentityFromRow(domRow);
-          if (identity && !rowByKey.has(identity.key)) rowByKey.set(identity.key, { domRow, ...identity });
+        const nativeListing = doc?.querySelector(".contracts_listing");
+        if (nativeListing) {
+          const entries = expiringContractEntries(doc, null);
+          render(entries, frame);
+          if (!entries.length) return;
+        }
+        // A slow or unavailable renewal analysis must not hide the native rows.
+        const snapshot = await directContractSnapshot(frame, 60000).catch(error => {
+          if (!nativeListing) throw error;
+          return null;
         });
-        const now = Date.now();
-        const entries = (snapshot?.analysis?.people || []).map(record => {
-          const key = `${record.kind}:${record.id}`;
-          const rowInfo = rowByKey.get(key);
-          const nativeExpiry = rowInfo?.domRow?.querySelector(".expiry")?.textContent;
-          const expiryText = localizedContractExpiry(nativeExpiry || record.expiryText);
-          const exact = Number(record.exactExpiry);
-          const rank = Number.isFinite(exact) && exact > 0 ? exact : expiryTimestampFromText(expiryText, now);
-          if (!Number.isFinite(rank) || rank <= now) return null;
-
-          const wageNode = rowInfo?.domRow?.querySelector(".day_wage");
-          let wage = String(wageNode?.innerText || wageNode?.textContent || "").replace(/\s+/g, " ").trim();
-          if (wage && /\d/.test(wage) && !/\bC\b|credit/i.test(wage)) wage = `${wage} C`;
-          if (!wage) {
-            const baseWage = Number(record.baseDayWage);
-            wage = record.baseDayWage != null && String(record.baseDayWage).trim() !== "" && Number.isFinite(baseWage) && baseWage >= 0
-              ? `${new Intl.NumberFormat(english ? "en-GB" : "da-DK", { maximumFractionDigits: 0 }).format(baseWage)} C`
-              : "—";
-          }
-          const roundedDays = Math.max(0, Math.ceil((rank - now) / 86_400_000));
-          return {
-            record,
-            rank,
-            expiry: expiryText || `${roundedDays} ${roundedDays === 1 ? (english ? "day" : "dag") : (english ? "days" : "dage")}`,
-            wage,
-            domRow: rowInfo?.domRow || null,
-            sourceLink: rowInfo?.link || null,
-          };
-        }).filter(Boolean).sort((a, b) => a.rank - b.rank || String(a.record.name || "").localeCompare(String(b.record.name || ""), english ? "en" : "da"));
-        render(entries.slice(0, 5), frame);
+        if (serial !== refreshSerial || !snapshot) return;
+        render(expiringContractEntries(nativeListing ? doc : frame.contentDocument, snapshot), frame);
       } catch (error) {
         if (serial === refreshSerial) showMessage(labels.expiringError);
-        
       }
     };
 
@@ -23446,13 +23599,11 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   }
 })();
 
-/* ===== Chrome 1.08 source: training_planner.js ===== */
+/* ===== Chrome 1.09 source: training_planner.js ===== */
 (() => {
   "use strict";
 
   const VIRM_BUILD_VERSION = String(globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ || "1.01.15");
-  const tpTrace = () => {};
-  tpTrace("planner-iife:entered", { href: window.location.href, pathname: window.location.pathname, readyState: document.readyState });
 
   // Lokale sprog- og dag/dage-hjælpere til Training Planner.
   // PP/KP-modulet har sine egne helpers i et separat IIFE-scope.
@@ -23494,21 +23645,14 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   const VIRM_ASSISTANT_PATH = window.location.pathname.replace(/\/+$/, "") || "/";
   const VIRM_TRAINING_PLANNER_PATH_RE = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?squads\/\d+\/training_exercises$/i;
   const plannerPathMatched = VIRM_TRAINING_PLANNER_PATH_RE.test(VIRM_ASSISTANT_PATH);
-  tpTrace("planner:path-check", { path: VIRM_ASSISTANT_PATH, matched: plannerPathMatched });
   if (!plannerPathMatched) return;
 
   // Sæt først loaded-flaget, når vi faktisk står på Training Planner-siden.
   // Ellers kan navigation fra en anden VMAN-side blokere initialiseringen.
-  tpTrace("planner:loaded-check", {
-    loadedFlag: Boolean(window.__VIRM_EXTENSION_010_LOADED__),
-    hostExists: Boolean(document.getElementById("virm-extension-host"))
-  });
   if (window.__VIRM_EXTENSION_010_LOADED__ && document.getElementById("virm-extension-host")) {
-    tpTrace("planner:skip-existing");
     return;
   }
   window.__VIRM_EXTENSION_010_LOADED__ = true;
-  tpTrace("planner:loaded-flag-set");
 
   const STORAGE_KEY = "virmExtensionStateV1";
   const STORAGE_LOCK_NAME = "virm-assistant-training-state-v1";
@@ -26476,42 +26620,24 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   }
 
   function ensureHost() {
-    tpTrace("ensureHost:start", {
-      existingLocalHost: Boolean(host),
-      localHostConnected: Boolean(host?.isConnected),
-      domHostExists: Boolean(document.getElementById("virm-extension-host")),
-      bodyExists: Boolean(document.body),
-      chromeRuntime: Boolean(globalThis.chrome?.runtime),
-      getURLType: typeof globalThis.chrome?.runtime?.getURL
-    });
     if (host && host.isConnected) {
-      tpTrace("ensureHost:reuse-connected");
       return;
     }
     host = document.createElement("div");
     host.id = "virm-extension-host";
     host.setAttribute("data-virm-extension-version", VIRM_BUILD_VERSION);
     shadow = host.attachShadow({ mode: "open" });
-    tpTrace("ensureHost:shadow-attached");
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
     stylesheet.href = chrome.runtime.getURL("panel.css");
-    tpTrace("ensureHost:stylesheet", { href: stylesheet.href });
     shadow.appendChild(stylesheet);
     buildShell();
-    tpTrace("ensureHost:buildShell-done", { appExists: Boolean(shadow?.querySelector?.(".virm-app")) });
     for (const eventName of ["pointerdown", "pointerup", "mousedown", "mouseup", "click", "dblclick", "contextmenu", "input", "change", "wheel", "keydown", "keyup"]) {
       host.addEventListener(eventName, (event) => event.stopPropagation());
     }
     document.body.appendChild(host);
     host.classList.add("virm-extension-pending");
-    tpTrace("ensureHost:appended", {
-      connected: Boolean(host.isConnected),
-      parentTag: host.parentElement?.tagName || null,
-      appExists: Boolean(shadow?.querySelector?.(".virm-app"))
-    });
     observeHostSizeForGrass();
-    tpTrace("ensureHost:observer-ready");
     if (stateLoaded) Promise.resolve().then(renderAll);
   }
 
@@ -32274,26 +32400,19 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   }
 
   async function initialize() {
-    tpTrace("initialize:start", { readyState: document.readyState });
     ensureHost();
-    tpTrace("initialize:after-ensureHost", { hostConnected: Boolean(host?.isConnected), pending: Boolean(host?.classList?.contains("virm-extension-pending")) });
     // Presets er lokale små filer, men de behøver ikke blokere første paint.
     // Indlæs state først og lad presets færdiggøre parallelt.
     const presetPromise = loadBuiltinPresets();
     await loadState();
-    tpTrace("initialize:after-loadState", { stateLoaded: Boolean(stateLoaded) });
     renderAll();
     void presetPromise.then(() => {
-      tpTrace("initialize:after-loadBuiltinPresets");
       if (stateLoaded) renderToolbar();
     }).catch((error) => console.warn("VIRM Assistant kunne ikke indlæse standardskabeloner", error));
-    tpTrace("initialize:after-renderAll", { appExists: Boolean(shadow?.querySelector?.(".virm-app")) });
     
     
     scanTrainingGroups();
-    tpTrace("initialize:after-scanTrainingGroups", { discoveredGroupCount: Number(discoveredGroups?.size || 0) });
     rememberCurrentSquad();
-    tpTrace("initialize:after-rememberCurrentSquad");
     liveDateKey = todayISO();
     window.setInterval(() => {
       const nextDateKey = todayISO();
@@ -32348,22 +32467,14 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       scheduleGroupScan();
     });
     pageObserver.observe(document.body, { childList: true, subtree: true });
-    tpTrace("initialize:observer-attached", { bodyExists: Boolean(document.body) });
-    tpTrace("initialize:complete", {
-      hostConnected: Boolean(host?.isConnected),
-      pending: Boolean(host?.classList?.contains("virm-extension-pending")),
-      hostClass: host?.className || null,
-      appClass: shadow?.querySelector?.(".virm-app")?.className || null
-    });
   }
 
   initialize().catch((error) => {
-    tpTrace("initialize:catch", { name: error?.name, message: error?.message, stack: error?.stack });
     console.error("VIRM Assistant kunne ikke starte", error);
   });
 })();
 
-/* ===== Chrome 1.08 source: player_forecast.js ===== */
+/* ===== Chrome 1.09 source: player_forecast.js ===== */
 // VIRM Assistant 0.1.282 – finalized three-factor development model for ages 28-40.
 // Factor 1 uses the existing empirical per-stat quantile curves as a sum-neutral distribution calibration.
 // Factor 2 controls total ability-sum development. Factor 3 is the conservative quality-at-28 correction.

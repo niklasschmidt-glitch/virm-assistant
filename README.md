@@ -2,7 +2,7 @@
 
 VIRM Assistant er en uofficiel browserudvidelse til Virtual Manager, som tilføjer værktøjer direkte på spillets sider.
 
-**Seneste Safari-udgave: 1.08 til både Mac og iPhone/iPad.**
+**Seneste Safari-udgave: 1.09 til både Mac og iPhone/iPad.**
 
 ## Funktioner
 
@@ -25,11 +25,11 @@ Der findes særskilte versioner til:
 - iPhone og iPad
 - Safari på Mac
 
-Version 1.08 indeholder de aktuelle værktøjer og rettelser fra Chrome-udgaven, danske og engelske manualer samt den anonyme statistikindsamling, der beskrives nedenfor. Offentlige Safari-filer indeholder ingen debug- eller adminpaneler.
+I 1.09 kan du rulle gennem alle spilleres og ansattes kontraktudløb i Kontrolcenter med fem synlige rækker og faste kolonneoverskrifter. Ligatabellerne viser oprykning med grønt og nedrykning med rødt. Danske og engelske manualer følger med, og det anonyme aktivitetssignal beskrives nedenfor. [Se udgivelsesnoterne til 1.09](safari/RELEASE_NOTES_1.09.md).
 
 ### English
 
-**Latest Safari release: 1.08 for both Mac and iPhone/iPad.** VIRM Assistant adds a customizable Control center, Training Module, Contract renewal, Tactic Scheduler, club ratings and player analysis directly to Virtual Manager. Version 1.08 includes the current tools and fixes, Danish and English manuals, and the anonymous activity signal described in the privacy policy below.
+**Latest Safari release: 1.09 for both Mac and iPhone/iPad.** VIRM Assistant adds a customizable Control center, Training Module, Contract renewal, Tactic Scheduler, club ratings and player analysis directly to Virtual Manager. In 1.09, you can scroll through all player and staff contract expiries in Control center, with five visible rows and fixed column headings. League tables mark promotion in green and relegation in red. Danish and English manuals are included. The privacy policy below describes the anonymous activity signal. [See the 1.09 release notes](safari/RELEASE_NOTES_1.09.md).
 
 **[Installation guide and Safari downloads in English](INSTALLATION_EN.md)**
 

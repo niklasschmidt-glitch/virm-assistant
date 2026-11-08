@@ -3,7 +3,7 @@
 // @name:da      VIRM Assistant – Safari Mobile
 // @name:en      VIRM Assistant – Safari Mobile
 // @namespace    https://www.virtualmanager.com/
-// @version      1.08
+// @version      1.09
 // @description  VIRM Assistant til Virtual Manager.
 // @description:da VIRM Assistant til Virtual Manager.
 // @description:en VIRM Assistant for Virtual Manager.

@@ -3,7 +3,7 @@
 // @name:da      VIRM Assistant – Safari Mac
 // @name:en      VIRM Assistant – Safari Mac
 // @namespace    https://www.virtualmanager.com/
-// @version      1.08
+// @version      1.09
 // @description  VIRM Assistant til Virtual Manager på Safari til Mac.
 // @description:da VIRM Assistant til Virtual Manager på Safari til Mac.
 // @description:en VIRM Assistant for Virtual Manager on Safari for Mac.
