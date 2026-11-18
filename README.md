@@ -2,7 +2,7 @@
 
 VIRM Assistant er en uofficiel browserudvidelse til Virtual Manager, som tilføjer værktøjer direkte på spillets sider.
 
-**Seneste Safari-udgave: 1.09 til både Mac og iPhone/iPad.**
+**Seneste Safari-udgave: 1.10 til både Mac og iPhone/iPad.**
 
 ## Funktioner
 
@@ -25,11 +25,11 @@ Der findes særskilte versioner til:
 - iPhone og iPad
 - Safari på Mac
 
-I 1.09 kan du rulle gennem alle spilleres og ansattes kontraktudløb i Kontrolcenter med fem synlige rækker og faste kolonneoverskrifter. Ligatabellerne viser oprykning med grønt og nedrykning med rødt. Danske og engelske manualer følger med, og det anonyme aktivitetssignal beskrives nedenfor. [Se udgivelsesnoterne til 1.09](safari/RELEASE_NOTES_1.09.md).
+I 1.10 placerer Stadions i Kontrolcenter måltribunerne bag målene og langsidetribunerne langs banen på både senior- og ungdomsstadionet. Danske og engelske manualer følger med, og det anonyme aktivitetssignal beskrives nedenfor. [Se udgivelsesnoterne til 1.10](safari/RELEASE_NOTES_1.10.md).
 
 ### English
 
-**Latest Safari release: 1.09 for both Mac and iPhone/iPad.** VIRM Assistant adds a customizable Control center, Training Module, Contract renewal, Tactic Scheduler, club ratings and player analysis directly to Virtual Manager. In 1.09, you can scroll through all player and staff contract expiries in Control center, with five visible rows and fixed column headings. League tables mark promotion in green and relegation in red. Danish and English manuals are included. The privacy policy below describes the anonymous activity signal. [See the 1.09 release notes](safari/RELEASE_NOTES_1.09.md).
+**Latest Safari release: 1.10 for both Mac and iPhone/iPad.** VIRM Assistant adds a customizable Control center, Training Module, Contract renewal, Tactic Scheduler, club ratings and player analysis directly to Virtual Manager. In 1.10, the Stadiums module places the end stands behind the goals and the side stands along the touchlines for both senior and youth stadiums. Danish and English manuals are included. The privacy policy below describes the anonymous activity signal. [See the 1.10 release notes](safari/RELEASE_NOTES_1.10.md).
 
 **[Installation guide and Safari downloads in English](INSTALLATION_EN.md)**
 
