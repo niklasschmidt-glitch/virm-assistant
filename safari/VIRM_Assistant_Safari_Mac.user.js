@@ -3,7 +3,7 @@
 // @name:da      VIRM Assistant – Safari Mac
 // @name:en      VIRM Assistant – Safari Mac
 // @namespace    https://www.virtualmanager.com/
-// @version      1.10
+// @version      1.11
 // @description  VIRM Assistant til Virtual Manager på Safari til Mac.
 // @description:da VIRM Assistant til Virtual Manager på Safari til Mac.
 // @description:en VIRM Assistant for Virtual Manager on Safari for Mac.
@@ -142,7 +142,7 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
   chromeShim.runtime={
     ...(chromeShim.runtime||{}),
     getURL(path){return resourceUrls[String(path||"").replace(/^\/+/,"")]||"";},
-    getManifest(){return {name:"VIRM Assistant",version:"1.10.0",version_name:"1.10"};},
+    getManifest(){return {name:"VIRM Assistant",version:"1.11.0",version_name:"1.11"};},
   };
   globalThis.chrome=chromeShim;
 
@@ -151,7 +151,7 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
   pageCss.textContent=VIRM_MAC_PAGE_CSS+"\n"+VIRM_MAC_TRAINING_HOST_CSS;
   (document.head||document.documentElement).appendChild(pageCss);
 
-/* ===== Chrome 1.10 source: localization.js ===== */
+/* ===== Chrome 1.11 source: localization.js ===== */
 (() => {
   "use strict";
 
@@ -911,7 +911,7 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
     attributes: true, attributeFilter: ["lang", "xml:lang", "content"] });
 })();
 
-/* ===== Chrome 1.10 source: request_guard.js ===== */
+/* ===== Chrome 1.11 source: request_guard.js ===== */
 (() => {
   "use strict";
 
@@ -1401,10 +1401,10 @@ const DB_NAME = "VIRMExtensionUserscriptMac";
   else document.addEventListener("DOMContentLoaded", applyDomState, { once: true });
 })();
 
-/* ===== Chrome 1.10 source: version.js ===== */
-globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.10";
+/* ===== Chrome 1.11 source: version.js ===== */
+globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.11";
 
-/* ===== Chrome 1.10 source: layout_observer.js ===== */
+/* ===== Chrome 1.11 source: layout_observer.js ===== */
 // Shared geometry tracking. Layout callbacks must preserve nodes and avoid data requests.
 (() => {
   "use strict";
@@ -1571,7 +1571,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.10";
   else boot();
 })();
 
-/* ===== Chrome 1.10 source: reporting.js ===== */
+/* ===== Chrome 1.11 source: reporting.js ===== */
 (() => {
   "use strict";
 
@@ -2083,11 +2083,11 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.10";
   }, true);
 })();
 
-/* ===== Chrome 1.10 source: contract_renewal.js ===== */
+/* ===== Chrome 1.11 source: contract_renewal.js ===== */
 (() => {
   "use strict";
 
-  const VIRM_CONTRACT_VERSION = "1.10";
+  const VIRM_CONTRACT_VERSION = "1.11";
   
   
   
@@ -2195,7 +2195,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.10";
       </div>${negotiation}`;
     };
     globalThis[SHARED_CONTRACT_UI_KEY] = Object.freeze({
-    version: "1.10",
+    version: "1.11",
       markup: sharedContractMarkup,
     });
   }
@@ -5449,7 +5449,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.10";
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot, { once: true });
 })();
 
-/* ===== Chrome 1.10 source: training_route.js ===== */
+/* ===== Chrome 1.11 source: training_route.js ===== */
 // LOCKED TRAINING PLANNER CORE – isolated from the rest of VIRM Assistant.
 // VMAN kan skifte side internt uden en fuld dokument-navigation. Content scripts
 // genkøres ikke ved sådan en navigation, så vi tvinger én normal reload, når
@@ -5485,7 +5485,7 @@ globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = "1.10";
   else document.addEventListener("DOMContentLoaded", startObserver, { once: true });
 })();
 
-/* ===== Chrome 1.10 source: content.js ===== */
+/* ===== Chrome 1.11 source: content.js ===== */
 (() => {
   "use strict";
   if (globalThis.__VIRM_KV_MODE_V1__) return;
@@ -18367,7 +18367,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   else boot();
 })();
 
-/* ===== Chrome 1.10 source: control_center.js ===== */
+/* ===== Chrome 1.11 source: control_center.js ===== */
 (function initializeControlCenter() {
   "use strict";
 
@@ -18388,7 +18388,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   if (globalThis.__VIRM_CONTROL_CENTER_V2__) return;
   globalThis.__VIRM_CONTROL_CENTER_V2__ = true;
 
-  const BUILD_VERSION = "1.10";
+  const BUILD_VERSION = "1.11";
   const QUERY_KEY = "virm_control_center";
   const NAV_SECTION_ID = "virm-assistant-control-center-nav-section";
   const NAV_LINK_ID = "virm-assistant-control-center-nav-link";
@@ -20298,12 +20298,12 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
     if (pitches.length !== 1) throw new Error("Missing or ambiguous stadium pitch");
     const pitch = pitches[0];
     if (!pitch || !Number.isFinite(pitch.pos_x) || !Number.isFinite(pitch.pos_y)) throw new Error("Missing stadium pitch");
-    // VMAN's north/south stands are behind the goals. Rotate the native
-    // positions clockwise so west/east run along the top/bottom of the KC pitch.
+    // Mirror the 1.10 layout horizontally to match VMAN's stadium view.
+    // Keep the touchline stands on the top/bottom and the goal stands on the sides.
     const slots = [
-      [6, -4], [0, -4], [-6, -4],
-      [6, 0], null, [-6, 0],
-      [6, 6], [0, 6], [-6, 6],
+      [-6, -4], [0, -4], [6, -4],
+      [-6, 0], null, [6, 0],
+      [-6, 6], [0, 6], [6, 6],
     ];
     return slots.map(slot => {
       if (!slot) return null;
@@ -23603,7 +23603,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   }
 })();
 
-/* ===== Chrome 1.10 source: training_planner.js ===== */
+/* ===== Chrome 1.11 source: training_planner.js ===== */
 (() => {
   "use strict";
 
@@ -32478,7 +32478,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   });
 })();
 
-/* ===== Chrome 1.10 source: player_forecast.js ===== */
+/* ===== Chrome 1.11 source: player_forecast.js ===== */
 // VIRM Assistant 0.1.282 – finalized three-factor development model for ages 28-40.
 // Factor 1 uses the existing empirical per-stat quantile curves as a sum-neutral distribution calibration.
 // Factor 2 controls total ability-sum development. Factor 3 is the conservative quality-at-28 correction.
