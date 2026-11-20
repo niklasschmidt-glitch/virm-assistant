@@ -2,7 +2,7 @@
 
 VIRM Assistant er en uofficiel browserudvidelse til Virtual Manager, som tilføjer værktøjer direkte på spillets sider.
 
-**Seneste Safari-udgave: 1.11 til både Mac og iPhone/iPad.**
+**Seneste Safari-udgave: 1.12 til både Mac og iPhone/iPad.**
 
 ## Funktioner
 
@@ -25,11 +25,11 @@ Der findes særskilte versioner til:
 - iPhone og iPad
 - Safari på Mac
 
-I 1.11 er stadionvisningen i Kontrolcenter spejlvendt vandret. Vest vises øverst, Øst nederst, Nord til venstre og Syd til højre på både senior- og ungdomsstadionet. Danske og engelske manualer følger med, og det anonyme aktivitetssignal beskrives nedenfor. [Se udgivelsesnoterne til 1.11](safari/RELEASE_NOTES_1.11.md).
+I 1.12 er kompasretningerne i Kontrolcenterets stadionvisning rettet. Vest vises øverst, Øst nederst, Syd til venstre og Nord til højre på både senior- og ungdomsstadionet. Danske og engelske manualer følger med, og det anonyme aktivitetssignal beskrives nedenfor. [Se udgivelsesnoterne til 1.12](safari/RELEASE_NOTES_1.12.md).
 
 ### English
 
-**Latest Safari release: 1.11 for both Mac and iPhone/iPad.** VIRM Assistant adds a customizable Control center, Training Module, Contract renewal, Tactic Scheduler, club ratings and player analysis directly to Virtual Manager. In 1.11, the Stadiums view in Control center is mirrored horizontally. West is at the top, east at the bottom, north on the left and south on the right for both senior and youth stadiums. Danish and English manuals are included. The privacy policy below describes the anonymous activity signal. [See the 1.11 release notes](safari/RELEASE_NOTES_1.11.md).
+**Latest Safari release: 1.12 for both Mac and iPhone/iPad.** VIRM Assistant adds a customizable Control center, Training Module, Contract renewal, Tactic Scheduler, club ratings and player analysis directly to Virtual Manager. In 1.12, the compass directions in the Stadiums view in Control center are corrected. West is at the top, east at the bottom, south on the left and north on the right for both senior and youth stadiums. Danish and English manuals are included. The privacy policy below describes the anonymous activity signal. [See the 1.12 release notes](safari/RELEASE_NOTES_1.12.md).
 
 **[Installation guide and Safari downloads in English](INSTALLATION_EN.md)**
 

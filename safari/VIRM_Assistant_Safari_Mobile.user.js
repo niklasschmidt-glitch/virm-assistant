@@ -3,7 +3,7 @@
 // @name:da      VIRM Assistant – Safari Mobile
 // @name:en      VIRM Assistant – Safari Mobile
 // @namespace    https://www.virtualmanager.com/
-// @version      1.11
+// @version      1.12
 // @description  VIRM Assistant til Virtual Manager.
 // @description:da VIRM Assistant til Virtual Manager.
 // @description:en VIRM Assistant for Virtual Manager.
@@ -17,7 +17,7 @@
 // @match        https://www.virtualmanager.com/*
 // ==/UserScript==
 
-// Generated from VIRM Assistant Chrome 1.11 with Safari Userscripts adapters.
+// Generated from VIRM Assistant Chrome 1.12 with Safari Userscripts adapters.
 // Language must be ready before the independent KC and contract modules.
 // ===== VIRM LOCALIZATION START =====
 (() => {
@@ -1186,7 +1186,7 @@ pageStyle.textContent = VIRM_MOBILE_PAGE_CSS;
 (document.head || document.documentElement).appendChild(pageStyle);
 
 // Buildnummer holdes uden for den låste Training Planner-kerne.
-const VIRM_BUILD_VERSION = "1.11";
+const VIRM_BUILD_VERSION = "1.12";
 globalThis.__VIRM_ASSISTANT_BUILD_VERSION__ = VIRM_BUILD_VERSION;
 // Manualerne opbevares som kommentarer i funktionskilder. Dermed skal Safari
 // ikke oprette og holde flere megabyte store JS-strenge under hver sideopstart;
@@ -32189,7 +32189,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
 (() => {
   "use strict";
 
-  const VIRM_CONTRACT_VERSION = "1.11";
+  const VIRM_CONTRACT_VERSION = "1.12";
   
   
   
@@ -32297,7 +32297,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
       </div>${negotiation}`;
     };
     globalThis[SHARED_CONTRACT_UI_KEY] = Object.freeze({
-    version: "1.11",
+    version: "1.12",
       markup: sharedContractMarkup,
     });
   }
@@ -35572,7 +35572,7 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
   if (globalThis.__VIRM_CONTROL_CENTER_V2__) return;
   globalThis.__VIRM_CONTROL_CENTER_V2__ = true;
 
-  const BUILD_VERSION = "1.11";
+  const BUILD_VERSION = "1.12";
   const QUERY_KEY = "virm_control_center";
   const NAV_SECTION_ID = "virm-assistant-control-center-nav-section";
   const NAV_LINK_ID = "virm-assistant-control-center-nav-link";
@@ -37482,12 +37482,12 @@ function virmOfficialRatingStyleForDisplayedValue(value) {
     if (pitches.length !== 1) throw new Error("Missing or ambiguous stadium pitch");
     const pitch = pitches[0];
     if (!pitch || !Number.isFinite(pitch.pos_x) || !Number.isFinite(pitch.pos_y)) throw new Error("Missing stadium pitch");
-    // Mirror the 1.10 layout horizontally to match VMAN's stadium view.
-    // Keep the touchline stands on the top/bottom and the goal stands on the sides.
+    // Match the requested compass: west at the top, east at the bottom,
+    // south on the left and north on the right, with corners following each stand.
     const slots = [
-      [-6, -4], [0, -4], [6, -4],
-      [-6, 0], null, [6, 0],
-      [-6, 6], [0, 6], [6, 6],
+      [6, -4], [0, -4], [-6, -4],
+      [6, 0], null, [-6, 0],
+      [6, 6], [0, 6], [-6, 6],
     ];
     return slots.map(slot => {
       if (!slot) return null;
